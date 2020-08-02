@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_82sdp"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        tools:ignore="RelativeOverlap">
+
+        <ImageView
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_back"
+            android:tint="@color/text_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/_8ssp"
+            tools:text="Back" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_back"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/ubuntu_medium"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        tools:text="Title" />
+
+</RelativeLayout>

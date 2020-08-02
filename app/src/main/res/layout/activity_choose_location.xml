@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootview">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:id="@+id/sv_chooseLocation"
+        style="@style/ScrollView"
+        android:layout_above="@id/btn_add_new_location"
+        android:paddingBottom="@dimen/_12sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_chooseLocation"
+                style="@style/Card"
+                android:layout_marginTop="0dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_chooseLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    tools:listitem="@layout/row_choose_location" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_new_location"
+        style="@style/Button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_18sdp"
+        tools:text="ADD NEW LOCATION" />
+
+    <include
+        android:id="@+id/loader"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</RelativeLayout>
