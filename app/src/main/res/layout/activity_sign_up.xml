@@ -41,15 +41,6 @@
                         android:layout_below="@+id/rl_username"
                         android:background="@color/screen_bg">
 
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/rl_username"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_marginTop="@dimen/_32sdp"
-                        android:background="@color/screen_bg">
-
                         <EditText
                             android:id="@+id/et_email"
                             android:layout_width="match_parent"
@@ -66,6 +57,34 @@
                             android:textColor="@color/text_dark"
                             android:textSize="@dimen/_12ssp"
                             android:hint="@string/user_name"
+                            tools:ignore="LabelFor" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:background="@color/screen_bg">
+
+                        <EditText
+                            android:id="@+id/et_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@null"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:hint="@string/email_address"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="60"
+                            android:maxLines="1"
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/_12ssp"
                             tools:ignore="LabelFor" />
 
                     </RelativeLayout>
@@ -97,23 +116,6 @@
                             android:hint="@string/password"
                             tools:ignore="LabelFor" />
 
-                        <EditText
-                            android:id="@+id/et_username"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="@dimen/_12sdp"
-                            android:layout_marginEnd="@dimen/_12sdp"
-                            android:background="@null"
-                            android:fontFamily="@font/ubuntu_regular"
-                            android:hint="@string/email_address"
-                            android:imeOptions="actionNext"
-                            android:importantForAutofill="no"
-                            android:inputType="textEmailAddress"
-                            android:maxLength="60"
-                            android:maxLines="1"
-                            android:textColor="@color/text_dark"
-                            android:textSize="@dimen/_12ssp"
-                            tools:ignore="LabelFor" />
 
                     </RelativeLayout>
 
