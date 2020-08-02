@@ -5,10 +5,7 @@ import androidx.lifecycle.Observer
 import com.framwork.useraddress.R
 import com.framwork.useraddress.lib.base.BaseActivity
 import com.framwork.useraddress.lib.base.BasePresenter
-import com.framwork.useraddress.lib.utils.Utility
-import com.framwork.useraddress.lib.utils.hide
-import com.framwork.useraddress.lib.utils.show
-import com.framwork.useraddress.lib.utils.startActivity
+import com.framwork.useraddress.lib.utils.*
 import com.framwork.useraddress.model.UserData
 import com.framwork.useraddress.module.onboarding.signin.ActivitySignIn
 import com.framwork.useraddress.module.chooselocation.ActivityChooseLocation
@@ -61,7 +58,7 @@ class ActivitySignUp : BaseActivity(), SignUpContract.View {
         mSignUpData.observe(this, Observer { mSignUpResponse ->
             when (mSignUpResponse) {
                 is UserData -> {
-                    UserData.setInstance(mSignUpResponse)
+                    Constants.setUserId(mSignUpResponse.userData?.user_id?:"")
                     startActivity<ActivityChooseLocation>()
                     finish()
                 }

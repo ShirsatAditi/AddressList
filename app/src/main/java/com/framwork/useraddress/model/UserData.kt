@@ -8,31 +8,20 @@ import com.google.gson.annotations.SerializedName
  *
  * @author Aditi Shirsat
  */
-object  UserData : BaseData(){
-    private var instance : UserData? = null
+data class UserData(@SerializedName("user_data")
+                    var userData: UserDetailsData? = UserDetailsData()
+):BaseData()
 
-    fun setInstance(instance:UserData){
-        this.instance = instance
-    }
-
-    fun getInstance() : UserData?{
-        return instance
-    }
-
-    @SerializedName("user_data")
-    var userData: UserDetailsData? = UserDetailsData()
-
-    class UserDetailsData {
+    data class UserDetailsData (
         @SerializedName("token")
-        val token: String? = ""
+        val token: String? = "",
 
         @SerializedName("user_id")
-        val user_id: String? = ""
+        val user_id: String? = "",
 
         @SerializedName("email")
-        val email: String? = ""
+        val email: String? = "",
 
         @SerializedName("username")
         val username: String? = ""
-    }
-}
+    )

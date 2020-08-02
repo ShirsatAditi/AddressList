@@ -12,11 +12,17 @@ import com.google.gson.reflect.TypeToken
  */
 object Constants {
 
+    var user_id = ""
+
     /*
      * @return User Id
      */
     fun getUserId(): String {
-         return  UserData.getInstance()?.userData?.user_id ?: ""
+         return  user_id ?:""
+    }
+
+    fun setUserId(user_id: String){
+        this.user_id = user_id
     }
     /**
      * @return User Private key
@@ -141,15 +147,6 @@ object Constants {
     const val COMPONENT_EVENT: String = "eventComponent"
     const val COMPONENT_INVITE = "inviteComponent"
 
-
-
-    /**
-     * Notification constants.
-     */
-    const val DUMMY_TITLE = "Wiishme"
-    const val NOTIFICATIONID = "notificationid"
-    const val NOTIFICATIONCOUNT = "notificationcount"
-    const val TITLE = "TITLE"
 
 
     const val BASEURL = "https://frozen-stream-02844.herokuapp.com/api/"

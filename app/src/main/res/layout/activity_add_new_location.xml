@@ -9,7 +9,6 @@
 
     <include layout="@layout/layout_toolbar" />
 
-
     <ScrollView
         style="@style/ScrollView"
         android:layout_above="@id/btn_save">
@@ -33,7 +32,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
-                        android:layout_marginTop="@dimen/_32sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
                         android:background="@color/screen_bg">
 
                         <EditText
@@ -89,7 +88,7 @@
                         android:background="@color/screen_bg">
 
                         <EditText
-                            android:id="@+id/city"
+                            android:id="@+id/et_city"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginStart="@dimen/_12sdp"
@@ -107,7 +106,6 @@
                             tools:ignore="LabelFor" />
 
                     </RelativeLayout>
-
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -134,7 +132,6 @@
                             tools:ignore="LabelFor" />
 
                     </RelativeLayout>
-
 
                 </LinearLayout>
 
@@ -164,26 +161,5 @@
         app:lottie_autoPlay="true"
         app:lottie_fileName="loader.json"
         app:lottie_loop="true" />
-
-    <EditText
-        android:id="@+id/et_city"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ."
-        android:fontFamily="@font/ubuntu_regular"
-        android:imeOptions="actionNext"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:maxLength="50"
-        android:maxLines="1"
-        android:paddingTop="@dimen/_6sdp"
-        android:paddingBottom="@dimen/_6sdp"
-        android:singleLine="true"
-        android:textColor="@color/text_dark"
-        android:textSize="@dimen/_12ssp"
-        tools:hint="City"
-        tools:ignore="LabelFor" />
-
 
 </RelativeLayout>

@@ -5,10 +5,7 @@ import androidx.lifecycle.Observer
 import com.framwork.useraddress.R
 import com.framwork.useraddress.lib.base.BaseActivity
 import com.framwork.useraddress.lib.base.BasePresenter
-import com.framwork.useraddress.lib.utils.Utility
-import com.framwork.useraddress.lib.utils.hide
-import com.framwork.useraddress.lib.utils.show
-import com.framwork.useraddress.lib.utils.startActivity
+import com.framwork.useraddress.lib.utils.*
 import com.framwork.useraddress.model.UserData
 import com.framwork.useraddress.module.onboarding.signup.ActivitySignUp
 import com.framwork.useraddress.module.chooselocation.ActivityChooseLocation
@@ -59,7 +56,7 @@ class ActivitySignIn : BaseActivity(), SignInContract.View {
                     Utility.showSnackBar(rl_main, signInResponse)
                 }
                 is UserData -> {
-                    UserData.setInstance(signInResponse)
+                    Constants.setUserId(signInResponse.userData?.user_id?:"")
                     startActivity<ActivityChooseLocation>()
                     finishAffinity()
                 }

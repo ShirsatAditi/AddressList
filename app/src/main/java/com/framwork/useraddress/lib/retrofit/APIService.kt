@@ -69,7 +69,7 @@ interface APIService {
 
     //127.0.0.8000/api/save_address
     @FormUrlEncoded
-    @POST("save_address/")
+    @POST("save_address")
     fun saveAddress(
         @Field("address_line1") address_line1: String,
         @Field("address_line2") address_line2: String,
@@ -80,7 +80,7 @@ interface APIService {
 
     //127.0.0.8000/api/login
     @FormUrlEncoded
-    @POST("get_address/")
+    @POST("get_address")
     fun getAddress(
         @Field("user_id") user_id: String
     ): Call<AddressData>
